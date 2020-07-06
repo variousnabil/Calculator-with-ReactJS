@@ -1,0 +1,116 @@
+$primary-color: #27ae60;
+$secondary-color: #2ecc71;
+@font-face {
+    font-family: "Digital";
+    src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+    src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
+  }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    font-size: 16px;
+}
+
+body {
+    background-color: $primary-color;
+    #root {
+        display:grid;
+        place-items: center;
+        height: 100vh;
+        width: 100vw;
+        .container {
+            background-color: $secondary-color;
+            width: 300px;
+            height: 400px;
+            margin: 2em;
+            border-radius: 0.25em;
+            display: grid;
+            gap: 0.5em;
+            padding: 2em;
+            grid-template-areas:
+                "display display display display"
+                "clear clear decimal divide"
+                "seven eight nine multiply"
+                "four five six subtract"
+                "one two three add"
+                "zero zero zero equals";
+            .btn {
+                background-color: #9ee9bd;
+                border-width: 0px;
+                color: black;
+                font-weight: bold;
+                border-radius: 0.75em;
+                cursor: pointer;
+            }
+
+            #display {
+                grid-area: display;
+                background-color: #9ee9bd;
+                margin-bottom: 14px;
+                border-width: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                span {
+                    color: black;
+                    font-size: 2em;
+                    font-weight: bold;
+                    margin-right: 0.5em;
+                    font-family: Digital;
+                }
+            }
+            #equals {
+                grid-area: equals;
+            }
+            #zero {
+                grid-area: zero;
+            }
+            #one {
+                grid-area: one;
+            }
+            #two {
+                grid-area: two;
+            }
+            #three {
+                grid-area: three;
+            }
+            #four {
+                grid-area: four;
+            }
+            #five {
+                grid-area: five;
+            }
+            #six {
+                grid-area: six;
+            }
+            #seven {
+                grid-area: seven;
+            }
+            #eight {
+                grid-area: eight;
+            }
+            #nine {
+                grid-area: nine;
+            }
+            #add {
+                grid-area: add;
+            }
+            #subtract {
+                grid-area: subtract;
+            }
+            #multiply {
+                grid-area: multiply;
+            }
+            #divide {
+                grid-area: divide;
+            }
+            #decimal {
+                grid-area: decimal;
+            }
+            #clear {
+                grid-area: clear;
+            }
+        }
+    }
+}
